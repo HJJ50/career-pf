@@ -74,7 +74,7 @@ footer{padding:20px 0;border-top:1px solid var(--line);text-align:center;color:#
 </style></head><body>
 <div id="gate"><div class="e">PRIVATE PORTFOLIO</div><h1>현재준 · 포트폴리오</h1>
 <p>열람 권한이 있는 분만 접근할 수 있습니다. 전달받은 비밀번호를 입력해 주세요.</p>
-<div><input id="pw" type="password" placeholder="비밀번호" autocomplete="off"><button id="go">열람</button></div>
+<div><input id="pw" type="password" placeholder="비밀번호" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"><button id="go">열람</button></div>
 <div class="err" id="err"></div><p class="note">열람 전용 · 무단 복제·배포·가공 금지</p></div>
 <div id="wm"></div>
 <div id="lb"><span class="x">×</span><img alt=""><div class="cap"></div></div>
@@ -242,9 +242,9 @@ footer{padding:20px 0;border-top:1px solid var(--line);text-align:center;color:#
 <script>
 (function(){
 var EXPIRY=new Date(2026,6,31,23,59).getTime();if(Date.now()>EXPIRY){document.documentElement.innerHTML='<body style="font-family:Malgun Gothic,sans-serif;background:#0c1019;color:#9aa6bd;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;text-align:center;font-size:16px;padding:24px">이 포트폴리오의 열람 기간이 만료되었습니다. (2026-07-31)</body>';return;}
-function H(t){var x=5381,i=0;for(;i<t.length;i++)x=((x*33)^t.charCodeAt(i))>>>0;return x;}var PWHASH=4193733238;
+var PW="guswowns";
 var g=document.getElementById('gate'),a=document.getElementById('app'),pw=document.getElementById('pw'),go=document.getElementById('go'),err=document.getElementById('err');
-function op(){if(H(pw.value)===PWHASH){go.onclick=op;pw.addEventListener('keydown',function(e){if(e.key==='Enter')op();});pw.focus();}else{err.textContent='비밀번호가 올바르지 않습니다.';pw.value='';pw.focus();}}
+function op(){if(pw.value.trim()===PW){go.onclick=op;pw.addEventListener('keydown',function(e){if(e.key==='Enter')op();});pw.focus();}else{err.textContent='비밀번호가 올바르지 않습니다.';pw.value='';pw.focus();}}
 go.onclick=op;pw.addEventListener('keydown',function(e){if(e.key==='Enter')op();});pw.focus();
 function wm(){var w=document.getElementById('wm');var d=new Date();var st=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');var t='현재준 · 010-8553-4002 · 열람전용 · '+st+'   ';for(var y=-200;y<innerHeight+600;y+=150){for(var x=-200;x<innerWidth+600;x+=470){var s=document.createElement('div');s.style.left=x+'px';s.style.top=y+'px';s.textContent=t;w.appendChild(s);}}}
 var lb=document.getElementById('lb'),lbi=lb.querySelector('img'),lbc=lb.querySelector('.cap');
