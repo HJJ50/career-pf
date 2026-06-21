@@ -242,7 +242,7 @@ footer{padding:20px 0;border-top:1px solid var(--line);text-align:center;color:#
 <script>
 (function(){
 var EXPIRY=new Date(2026,6,31,23,59).getTime();if(Date.now()>EXPIRY){document.documentElement.innerHTML='<body style="font-family:Malgun Gothic,sans-serif;background:#0c1019;color:#9aa6bd;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;text-align:center;font-size:16px;padding:24px">이 포트폴리오의 열람 기간이 만료되었습니다. (2026-07-31)</body>';return;}
-var PASSWORD="guswowns";
+var PASSWORD="";
 var g=document.getElementById('gate'),a=document.getElementById('app'),pw=document.getElementById('pw'),go=document.getElementById('go'),err=document.getElementById('err');
 function op(){if(pw.value===PASSWORD){g.style.display='none';a.style.display='block';wm();}else{err.textContent='비밀번호가 올바르지 않습니다.';pw.value='';pw.focus();}}
 g.style.display='none';a.style.display='block';wm();
