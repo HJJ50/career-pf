@@ -244,8 +244,8 @@ footer{padding:20px 0;border-top:1px solid var(--line);text-align:center;color:#
 var EXPIRY=new Date(2026,6,31,23,59).getTime();if(Date.now()>EXPIRY){document.documentElement.innerHTML='<body style="font-family:Malgun Gothic,sans-serif;background:#0c1019;color:#9aa6bd;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;text-align:center;font-size:16px;padding:24px">이 포트폴리오의 열람 기간이 만료되었습니다. (2026-07-31)</body>';return;}
 var PW="guswowns";
 var g=document.getElementById('gate'),a=document.getElementById('app'),pw=document.getElementById('pw'),go=document.getElementById('go'),err=document.getElementById('err');
-function op(){if(pw.value.trim()===PW){go.onclick=op;pw.addEventListener('keydown',function(e){if(e.key==='Enter')op();});pw.focus();}else{err.textContent='비밀번호가 올바르지 않습니다.';pw.value='';pw.focus();}}
-go.onclick=op;pw.addEventListener('keydown',function(e){if(e.key==='Enter')op();});pw.focus();
+function op(){if(pw.value.trim()===PW){g.style.display='none';a.style.display='block';wm();}else{err.textContent='비밀번호가 올바르지 않습니다.';pw.value='';pw.focus();}}
+g.style.display='none';a.style.display='block';wm();
 function wm(){var w=document.getElementById('wm');var d=new Date();var st=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');var t='현재준 · 010-8553-4002 · 열람전용 · '+st+'   ';for(var y=-200;y<innerHeight+600;y+=150){for(var x=-200;x<innerWidth+600;x+=470){var s=document.createElement('div');s.style.left=x+'px';s.style.top=y+'px';s.textContent=t;w.appendChild(s);}}}
 var lb=document.getElementById('lb'),lbi=lb.querySelector('img'),lbc=lb.querySelector('.cap');
 window.LB=function(fig){var im=fig.querySelector('img');var cap=fig.querySelector('figcaption');lbi.src=im.src;lbc.textContent=cap?cap.childNodes[0].textContent:'';lb.style.display='flex';};
