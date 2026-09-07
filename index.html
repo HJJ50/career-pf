@@ -54,7 +54,7 @@ section{padding:42px 0;border-top:1px solid var(--line)}
 .platform-block{margin-top:20px}.block-title{font-size:15px;font-weight:800}.domain-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}
 .domain-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 15px;color:#37425c;font-size:12.5px;font-weight:700;min-width:0}
 .domain-caption,.status-caption,.metric-caption{color:var(--sub);font-size:11.5px;margin-top:10px}
-.benchmark-box{margin-top:18px;background:#eef3fc;border:1px solid #d6e0f5;border-radius:14px;padding:18px;color:#274690;font-size:13.5px}.benchmark-box h3{font-size:15px;color:var(--accent);margin-bottom:6px}.benchmark-box b{color:var(--accent)}
+.benchmark-box{margin-top:18px;background:#eef3fc;border:1px solid #d6e0f5;border-radius:14px;padding:18px;color:#274690;font-size:13.5px}.benchmark-box h3{font-size:15px;color:var(--accent);margin-bottom:6px}.benchmark-lead{font-weight:800;color:var(--ink)}.benchmark-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:13px}.benchmark-metric{background:#fff;border:1px solid #d6e0f5;border-radius:10px;padding:10px 12px;min-width:0}.benchmark-metric .n{display:block;color:var(--accent);font-size:20px;font-weight:800;line-height:1.2;font-variant-numeric:tabular-nums}.benchmark-metric .l{display:block;color:var(--sub);font-size:11px;font-weight:700;margin-top:3px}.benchmark-groups{display:grid;gap:8px;margin-top:13px}.benchmark-group{display:flex;align-items:flex-start;gap:9px;min-width:0}.benchmark-label{flex:0 0 132px;color:#37425c;font-size:11.5px;font-weight:800;padding-top:4px}.benchmark-chips{display:flex;flex-wrap:wrap;gap:5px;min-width:0}.benchmark-chip{display:inline-flex;align-items:center;background:#fff;border:1px solid #d6e0f5;border-radius:999px;padding:3px 8px;color:#46536e;font-size:10.5px;font-weight:700;line-height:1.45}.benchmark-note{margin-top:12px;padding-top:10px;border-top:1px solid #d6e0f5;color:var(--sub);font-size:11px}
 .platform-status{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}.status-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:17px;text-align:center;min-width:0}.status-card .n{font-size:24px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums}.status-card .l{font-size:12px;color:var(--sub);font-weight:700;margin-top:4px}
 /* operating metrics */
 .metrics-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(250px,.7fr);gap:14px;margin-top:20px;align-items:stretch}
@@ -96,7 +96,7 @@ section{padding:42px 0;border-top:1px solid var(--line)}
 footer{padding:20px 0;border-top:1px solid var(--line);text-align:center;color:var(--sub);font-size:12px}.note{color:var(--sub);font-size:11.5px;margin-top:5px}
 @media(max-width:860px){.conns,.ops-cards,.projects{grid-template-columns:repeat(2,minmax(0,1fr))}.pillars,.grid2,.metrics-layout,.platform-status,.external-grid{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr}.asset-panel{align-items:center}}
 @media(max-width:768px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.projects{grid-template-columns:1fr}.metric-row{grid-template-columns:minmax(0,1fr) 44px;grid-template-areas:"label label" "chart value" "case case"}.metric-label{margin-top:2px}}
-@media(max-width:520px){.gal,.domain-grid,.governance-grid{grid-template-columns:1fr}.wrap{padding:0 18px}.kpi{padding:15px}.kpi .n{font-size:21px}.ops-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.op-stat{padding:14px}.metric-panel,.asset-panel{padding:17px}}
+@media(max-width:520px){.gal,.domain-grid,.governance-grid{grid-template-columns:1fr}.wrap{padding:0 18px}.kpi{padding:15px}.kpi .n{font-size:21px}.ops-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.op-stat{padding:14px}.metric-panel,.asset-panel{padding:17px}.benchmark-box{padding:15px}.benchmark-metric{padding:9px 7px}.benchmark-metric .n{font-size:18px}.benchmark-group{display:block}.benchmark-label{padding:0 0 4px}.benchmark-chip{font-size:10px}}
 @media print{#gate,#wm,#lb{display:none!important}body{background:#fff!important}section,.kpi,.pcard,.arch,.conn,.item,.domain-card,.benchmark-box,.status-card,.metric-panel,.asset-panel,.op-stat,.governance-card,.external-card,.project-card,.card{break-inside:avoid;page-break-inside:avoid}section{background:#fff!important}}
 </style></head><body>
 <div id="gate"><div class="e">비공개 포트폴리오</div><h1>현재준 · 포트폴리오</h1>
@@ -110,7 +110,7 @@ footer{padding:20px 0;border-top:1px solid var(--line);text-align:center;color:v
  <header class="hero"><div class="wrap">
   <div class="eyebrow">경영관리 × 시스템 구축</div>
   <h1>제도를 설계하고, 그것을 실현하는<br><span class="hl">플랫폼까지 AI로 직접 구축합니다</span></h1>
-  <p class="lead">9년간 세무·회계에서 인사·노무, 법무, 경영·전략기획까지 경영관리 제도를 직접 설계해 왔습니다. 현재 화장품 수출·유통 B2B 기업에서, 제도가 만드는 반복 운영 소요를 <b>AI(Claude·Codex) 오케스트레이션</b>으로 자동화하고, 흩어진 업무 시스템을 하나의 통합 플랫폼으로 직접 설계·구축하며 '설계 → 운영 → 자동화'의 루프를 닫습니다.</p>
+  <p class="lead">9년간 세무·회계, 인사·노무, 법무, 경영·전략기획 제도를 직접 설계했습니다. 현재 화장품 수출·유통 B2B 기업에서 <b>AI(Claude·Codex) 오케스트레이션</b>을 운영합니다. 반복 업무를 자동화하고, 흩어진 시스템도 하나의 플랫폼으로 통합해 '설계 → 운영 → 자동화'를 완성합니다.</p>
   <div class="meta"><span class="pill">경영기획·전략기획</span><span class="pill">시스템 통합</span><span class="pill">업무 자동화</span><span class="pill">AI 도입</span><span class="pill">데이터 인사이트</span><span class="pill">법무·계약</span></div>
   <div class="kpis">
    <div class="kpi"><div class="n">9년</div><div class="l">경영관리 풀스택 경력</div></div>
@@ -131,13 +131,13 @@ footer{padding:20px 0;border-top:1px solid var(--line);text-align:center;color:v
    <div class="pcard"><div class="ic">🤖</div><h3>AI 도입·자동화</h3><p>업무 프로세스에 AI(Claude·Codex)를 내장해 운영 소요 제거.</p></div>
    <div class="pcard"><div class="ic">📊</div><h3>데이터 기반 의사결정</h3><p>통합 DB를 분석해 체결률·실적 등 경영 인사이트 도출.</p></div>
    <div class="pcard"><div class="ic">⚖️</div><h3>법무·컴플라이언스</h3><p>계약 설계, 직무별 법령 DB를 양식·계약 자동 검사와 연계.</p></div>
-   <div class="pcard"><div class="ic">📄</div><h3>문서·데이터 표준화</h3><p>통합 DB·문서·결재 양식의 단일 표준과 문서 규정·문서번호 체계 정립.</p></div>
+   <div class="pcard"><div class="ic">📄</div><h3>문서·데이터 표준화</h3><p>통합 DB·문서·결재 양식과 문서번호의 단일 표준 정립.</p></div>
   </div>
  </div></section>
 
  <section style="background:#fff"><div class="wrap">
   <div class="sec-h">대표작</div><div class="sec-t">전사 통합 운영 플랫폼 구축</div>
-  <p class="sec-d">처음에는 영업관리(CRM) 한 기능으로 시작했으나, 회사 업무 전체를 한 흐름으로 잇는 전사 플랫폼으로 범위를 넓혔습니다. 지금은 사내에서 쓰는 것을 넘어 외부에 판매할 수 있는 완성도를 목표로 잡고, 그 완성도를 재는 기준부터 직접 만들었습니다.</p>
+  <p class="sec-d">영업관리(CRM) 한 기능에서 회사 업무 전체를 잇는 전사 플랫폼으로 범위를 넓혔습니다. 지금은 외부 판매 가능한 완성도를 목표로 기준까지 직접 세웠습니다.</p>
   <div class="platform-block">
    <div class="block-title">10개 업무 영역</div>
    <div class="domain-grid">
@@ -152,18 +152,29 @@ footer{padding:20px 0;border-top:1px solid var(--line);text-align:center;color:v
     <div class="domain-card">D9 법무·준법·계약관리</div>
     <div class="domain-card">D10 플랫폼 기반</div>
    </div>
-   <div class="domain-caption">10개 영역 70개 기능을 완성 기준으로 정의하고 기능별로 증거를 붙여 판정합니다.</div>
+   <div class="domain-caption">10개 영역 · 70개 기능</div>
   </div>
-  <div class="benchmark-box">
-   <h3>완성도 측정 기준을 직접 수립</h3>
-   <p>사내 기준으로 "다 만들었다"고 말하지 않기 위해, 외부 제품과 같은 잣대를 먼저 세웠습니다. 업무협업(Microsoft·Google·Slack·Jira·ServiceNow), 고객관리·전자서명(Salesforce·HubSpot·Docusign·Adobe), 전사자원관리·인사(Dynamics 365·NetSuite·Odoo·Workday·Personio) 등 <b>31개 공식 도메인의 문서 212건</b>을 근거로 기능별 완성 기준을 정의하고, 기능마다 직접 증거를 대조해 공정률을 산정합니다.</p>
-  </div>
+   <div class="benchmark-box">
+    <h3>판정 기준</h3>
+    <div class="benchmark-lead">사내 기준으로 완성을 말하지 않는다.</div>
+    <div class="benchmark-metrics">
+     <div class="benchmark-metric"><span class="n">31</span><span class="l">참조 도메인</span></div>
+     <div class="benchmark-metric"><span class="n">212건</span><span class="l">근거 문서</span></div>
+     <div class="benchmark-metric"><span class="n">70개</span><span class="l">판정 대상 기능</span></div>
+    </div>
+    <div class="benchmark-groups">
+     <div class="benchmark-group"><div class="benchmark-label">업무협업</div><div class="benchmark-chips"><span class="benchmark-chip">Microsoft</span><span class="benchmark-chip">Google</span><span class="benchmark-chip">Slack</span><span class="benchmark-chip">Jira</span><span class="benchmark-chip">ServiceNow</span></div></div>
+     <div class="benchmark-group"><div class="benchmark-label">고객관리·전자서명</div><div class="benchmark-chips"><span class="benchmark-chip">Salesforce</span><span class="benchmark-chip">HubSpot</span><span class="benchmark-chip">Docusign</span><span class="benchmark-chip">Adobe</span></div></div>
+     <div class="benchmark-group"><div class="benchmark-label">전사자원관리·인사</div><div class="benchmark-chips"><span class="benchmark-chip">Dynamics 365</span><span class="benchmark-chip">NetSuite</span><span class="benchmark-chip">Odoo</span><span class="benchmark-chip">Workday</span><span class="benchmark-chip">Personio</span></div></div>
+    </div>
+    <div class="benchmark-note">기능마다 증거를 대조해 판정.</div>
+   </div>
   <div class="platform-status">
    <div class="status-card"><div class="n">25.3%</div><div class="l">시장 판매 가능 수준 대비 공정률</div></div>
    <div class="status-card"><div class="n">0%</div><div class="l">실제 사내 사용률 (아직 운영 전환 전)</div></div>
    <div class="status-card"><div class="n">74.7%</div><div class="l">잔여 공정률</div></div>
   </div>
-  <div class="status-caption">기준일 2026-07-31 · 낮은 수치를 그대로 씁니다. 기능이 있다는 것과 실제로 쓰인다는 것을 구분해 측정하기 때문입니다.</div>
+  <div class="status-caption">기준일 2026-07-31 · 만든 것과 실제로 쓰이는 것을 나눠 잰 수치</div>
   <div class="arch">
    <div class="layer"><div class="lname">① 데이터 소스 · 분산된 업무 시스템 (현재)</div><div class="lrow">
     <div class="lnode"><b>이카운트 ERP</b><span>국내 발주·출고·재고·판매·회계</span></div>
@@ -192,7 +203,7 @@ footer{padding:20px 0;border-top:1px solid var(--line);text-align:center;color:v
     <div class="lnode"><b>내장 LLM</b><span>판단·요약·검증 자동화</span></div>
    </div></div>
    <div class="legend"><span><b>구축 단계</b></span><span>실서버 운영: 이카운트</span><span>샌드박스: 왕뎬통</span><span>기술검증: 전자서명</span><span>개발 중: 고객관리·문서인식·사업자검증</span></div>
-   <div class="eff">⚙️ <b>설계 목표</b> · 백오피스·반복 운영 부담을 플랫폼이 흡수해, 대규모 실무·지원 인력 없이 <b>소수 인력만으로 조직 전체가 원활히 운영되는 환경</b> 구현(이중입력·수작업 대사 제거).</div>
+   <div class="eff">⚙️ <b>설계 목표</b> · 백오피스·반복 업무를 플랫폼으로 통합. 이중입력·수작업 대사 없이 <b>소수 인력으로 조직 전체를 운영하는 환경</b> 구현.</div>
    <div class="eff blue" style="margin-top:12px">🖥️ 개발 중인 실제 화면은 보안 검토 후 별도로 보여드립니다.</div>
   </div>
  </div></section>
@@ -201,7 +212,7 @@ footer{padding:20px 0;border-top:1px solid var(--line);text-align:center;color:v
   <div class="sec-h">시스템 통합</div><div class="sec-t">다중 시스템 API 연동 (9종)</div>
   <p class="sec-d">서로 다른 시스템을 직접 연동해 데이터를 단일화했습니다.</p>
   <div class="conns">
-   <div class="conn"><b>이카운트 ERP</b><span>인증체계 구축, 14종 API 검증, 재고·판매 전 품목(약 3,000건) 연동</span><div class="t">실서버 운영</div></div>
+   <div class="conn"><b>이카운트 ERP</b><span>인증체계 구축 · 14종 API 검증 · 전 품목(약 3,000건) 재고·판매 연동</span><div class="t">실서버 운영</div></div>
    <div class="conn"><b>왕뎬통 ERP</b><span>중국 B2B 도매 재고·주문 데이터</span><div class="t">샌드박스 읽기검증·쓰기 개발중</div></div>
    <div class="conn"><b>하이웍스 그룹웨어</b><span>전자결재·인사·근태, 사원 일괄등록</span><div class="t">운영</div></div>
    <div class="conn"><b>노션</b><span>협업·프로젝트·사내 DB 연동</span><div class="t">운영</div></div>
@@ -215,13 +226,13 @@ footer{padding:20px 0;border-top:1px solid var(--line);text-align:center;color:v
 
  <section style="background:#fff"><div class="wrap">
   <div class="sec-h">업무 속 인공지능</div><div class="sec-t">업무 프로세스에 AI를 내장</div>
-  <p class="sec-d">사람이 판단해야 하는 일과 기계가 반복하는 일을 갈라, 반복 쪽을 직접 만든 자동화 자산 95종(전체 운영 자산 174종)으로 옮겼습니다. 산출물이 나올 때마다 32종의 검사 도구가 자동으로 돌아 규격 위반을 걸러냅니다.</p>
+  <p class="sec-d">사람의 판단과 기계의 반복 업무를 나눴습니다. 반복 업무는 직접 만든 자동화 자산 95종(전체 운영 자산 174종)으로 옮겼습니다. 산출물마다 검사 도구 32종이 규격 위반을 걸러냅니다.</p>
   <div class="grid2">
-   <div class="item"><h4>채용 평가 AI <span class="tag">1,000건+</span></h4><p>이력서 본문을 AI가 맥락 평가해 합격/보류/탈락 등급으로 자동 분류(병렬), 직무적합도·예상연봉 정성평가. 누적 1,000건+ 검증.</p></div>
-   <div class="item"><h4>고객 등록 AI <span class="tag">개발·검증 중</span></h4><p>사업자등록증 자동 인식 + 국세청(홈택스) 연동 사업자번호 자동 검증 → 고객 자동 등록 → 견적·계약 자동 연계.</p></div>
+   <div class="item"><h4>채용 평가 AI <span class="tag">1,000건+</span></h4><p>이력서 맥락 평가로 합격/보류/탈락 병렬 분류. 직무적합도·예상연봉 정성평가. 누적 1,000건+.</p></div>
+   <div class="item"><h4>고객 등록 AI <span class="tag">개발·검증 중</span></h4><p>사업자등록증 인식 → 국세청(홈택스) 사업자번호 검증 → 고객 등록 → 견적·계약 연계.</p></div>
    <div class="item"><h4>문서 작성 AI</h4><p>주간 경영보고를 다중 소스에서 자동 생성·요약·자가검증. 반복 보고 작성 소요 제거.</p></div>
    <div class="item"><h4>플랫폼 내장 LLM</h4><p>백엔드에 LLM을 연동해 판단·요약·평가가 필요한 업무까지 자동 처리.</p></div>
-   <div class="item"><h4>품질 검사 자동화</h4><p>문서·코드 산출물마다 형식·수치·렌더링을 기계가 검사해 통과하지 못하면 발행을 막습니다.</p></div>
+   <div class="item"><h4>품질 검사 자동화</h4><p>형식·수치·렌더링 검사 미통과 시 문서·코드 발행 차단.</p></div>
   </div>
  </div></section>
 
@@ -233,7 +244,7 @@ footer{padding:20px 0;border-top:1px solid var(--line);text-align:center;color:v
    <div class="lnode hub"><b>분석</b><span>흐름 연결·집계</span></div>
    <div class="lnode"><b>인사이트</b><span>가격대·산업군별 체결률 / 개선 제품·서비스</span></div>
   </div>
-  <div class="eff blue">📊 <b>설계 목표</b> · 영업 데이터(견적 → 계약 흐름)를 분석해 가격대·산업군별 체결률, 개선 필요 제품·서비스를 도출 → 영업·상품 전략 의사결정에 활용. (통합 운영 플랫폼과 함께 설계한 분석 체계)</div>
+  <div class="eff blue">📊 <b>설계 목표</b> · 견적 → 계약 흐름의 가격대·산업군별 체결률 분석. 개선할 제품·서비스를 찾아 영업·상품 전략에 반영. (통합 운영 플랫폼과 함께 설계한 분석 체계)</div>
  </div>
  </div></section>
 
@@ -292,21 +303,21 @@ footer{padding:20px 0;border-top:1px solid var(--line);text-align:center;color:v
 
  <section style="background:#fff"><div class="wrap">
   <div class="sec-h">제도·규정</div><div class="sec-t">제도와 규정을 문서 하나가 아니라 체계로</div>
-  <p class="sec-d">개별 문서를 쓰는 데서 그치지 않고, 문서의 서식·번호·검사 규칙까지 표준으로 만들어 누가 쓰더라도 같은 품질이 나오게 했습니다.</p>
+  <p class="sec-d">문서 서식·번호·검사 규칙까지 표준화했습니다. 누가 작성해도 같은 품질이 나옵니다.</p>
   <div class="governance-grid">
-   <div class="governance-card"><h3>문서 서식 정본 4종 제정</h3><p>규정·시행세칙·지침·업무매뉴얼의 서식 정본을 만들고, 표지와 문서관리면을 공통으로 상속하게 했습니다. (2026-09-07)</p></div>
-   <div class="governance-card"><h3>자동 검사기</h3><p>장·조문·별표 번호가 빠짐없이 이어지는지, 서식이 규격을 지키는지 기계가 검사합니다. 문서마다 개수가 다른 점을 반영해 고정 수량 검사를 연속성 검사로 바꿨습니다.</p></div>
+   <div class="governance-card"><h3>문서 서식 정본 4종 제정</h3><p>규정·시행세칙·지침·업무매뉴얼 정본, 표지·문서관리면 공통 상속. (2026-09-07)</p></div>
+   <div class="governance-card"><h3>자동 검사기</h3><p>장·조문·별표 번호와 서식 규격 기계 검사. 문서별 수량 차이는 연속성 검사로 반영.</p></div>
    <div class="governance-card"><h3>사내 규정 제정</h3><p>직제규정, 위임전결규정, 인사관리규정, 사내규정관리규정, 경영기획 업무편람·세칙.</p></div>
-   <div class="governance-card"><h3>직무능력 제도</h3><p>직무등급·역량평가·연봉밴드·승급 기준을 설계하고, 규칙을 바꿀 때마다 자동 검증이 돌도록 만들었습니다.</p></div>
+   <div class="governance-card"><h3>직무능력 제도</h3><p>직무등급·역량평가·연봉밴드·승급 기준 설계. 규칙 변경마다 자동 검증.</p></div>
   </div>
  </div></section>
 
  <section><div class="wrap">
   <div class="sec-h">자금·대외</div><div class="sec-t">자금 조달과 대외 협상</div>
   <div class="external-grid">
-   <div class="external-card"><h3>중진공 신시장진출 정책자금</h3><p>사업계획서 26쪽을 직접 작성하고 자금 용도를 완제품·판로·물류·인증·플랫폼·본사 6개 항목으로 나눠 10억원 규모로 신청. 현장실사 대응까지 수행. 공정률 90%.</p></div>
-   <div class="external-card"><h3>수출신용보증(K-SURE)</h3><p>선적 전 완제품 구매자금 5억원 한도 검토·신청, 은행 제안금리 4.345% 확인, 보완 회신 대응.</p></div>
-   <div class="external-card"><h3>총판계약 표준화</h3><p>회사 표준 총판계약서를 제정하고, 상대방 초안을 최악의 해석으로 뒤집어보는 검증을 거쳐 재매입 범위·판매보장·해지 조항의 결함을 잡아냈습니다.</p></div>
+   <div class="external-card"><h3>중진공 신시장진출 정책자금</h3><p>사업계획서 26쪽 직접 작성. 완제품·판로·물류·인증·플랫폼·본사 6개 자금 용도로 10억원 신청. 현장실사 대응, 공정률 90%.</p></div>
+   <div class="external-card"><h3>수출신용보증(K-SURE)</h3><p>선적 전 완제품 구매자금 5억원 한도 신청 · 은행 제안금리 4.345% 확인 · 보완 회신 대응</p></div>
+   <div class="external-card"><h3>총판계약 표준화</h3><p>회사 표준 총판계약서 제정 · 상대방 초안 최악해석 검증 · 재매입 범위·판매보장·해지 조항 결함 발견</p></div>
   </div>
  </div></section>
 
@@ -332,15 +343,15 @@ footer{padding:20px 0;border-top:1px solid var(--line);text-align:center;color:v
    <div style="font-size:12px;color:var(--sub);margin-top:4px">절감분은 성과 보상 재원으로 재투입 → 보상·동기부여 강화.</div>
   </div>
   <div class="grid2">
-   <div class="item"><h4>ROI 기반 성과제도 개발·운영</h4><p>매출·원가·손익·기획 실적을 통합한 성과지표 체계를 구축해 전사 목표·성과 관리 기준을 표준화.</p></div>
-   <div class="item"><h4>전사 규정·인사 시스템 전면 재정립</h4><p>취업규칙·근로계약·포상/징계·평가/성과/직무 등 핵심 규정·프로세스를 문서·제도·시스템 기반으로 재정비, 운영 리스크 감소.</p></div>
+   <div class="item"><h4>ROI 기반 성과제도 개발·운영</h4><p>매출·원가·손익·기획 실적 기반 성과지표로 전사 목표·성과 관리 표준화.</p></div>
+   <div class="item"><h4>전사 규정·인사 시스템 전면 재정립</h4><p>핵심 규정·프로세스를 문서·제도·시스템으로 재정비해 운영 리스크 감소.</p></div>
   </div>
  </div></section>
 
  <section style="background:#fff"><div class="wrap">
   <div class="sec-h">경력</div><div class="sec-t">경력</div>
   <div class="tl">
-   <div class="t"><div class="when">2026.02 ~ 현재</div><div class="role">(주)마이커머스 · 경영지원 파트장</div><div class="desc">경영지원(인사·총무·법무) 총괄에서 경영기획 기능 신설로 확장. 전사 통합 플랫폼·고객관리 구축, 시스템 연동, AI 도입·운영 자동화를 직접 주도하고, 직제·위임전결·업무편람 등 사내 규정 체계와 정책자금 조달을 담당.</div></div>
+   <div class="t"><div class="when">2026.02 ~ 현재</div><div class="role">(주)마이커머스 · 경영지원 파트장</div><div class="desc">경영지원(인사·총무·법무) 총괄 후 경영기획 기능 신설. 전사 플랫폼·고객관리·시스템 연동·AI 자동화 주도. 직제·위임전결·업무편람과 정책자금 조달 담당.</div></div>
    <div class="t"><div class="when">2025.09 ~ 2025.12</div><div class="role">레코더즈 · 인사·경영지원팀 팀장</div><div class="desc">세무·회계·인사·노무 내재화, 제 규정·성과제도 도입, 법무·대관.</div></div>
    <div class="t"><div class="when">2022.08 ~ 2024.08</div><div class="role">아렌 · 경영기획팀 과장/팀장</div><div class="desc">성과제도·NCS 직능급·전사 인사규정 설계·도입 (인건비 구조 안정화).</div></div>
    <div class="t"><div class="when">2022.02 ~ 2022.07</div><div class="role">(주)케이오스크 · 경영관리팀 과장/팀장</div><div class="desc">세무·회계·인사·법무·총무 전반.</div></div>
